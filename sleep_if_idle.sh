@@ -3,8 +3,8 @@
 # Time threshold in seconds (15 minutes)
 THRESHOLD=600
 
-# Log file location
-LOGFILE="/Users/fireparty/zfus/idle-sleep/idle_sleep.log"
+# Log file location  #update your_username to you mac username
+LOGFILE="/Users/your_username/zfus/idle-sleep/idle_sleep.log"
 
 while true; do
     idle_time=$(ioreg -c IOHIDSystem | awk '/HIDIdleTime/ {print $NF / 1000000000; exit}')
@@ -17,3 +17,4 @@ while true; do
 
     sleep 60
 done
+

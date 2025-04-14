@@ -9,7 +9,7 @@
     <key>ProgramArguments</key>
     <array>
       <string>/bin/bash</string>
-      <string>/Users/fireparty/zfus/idle-sleep/sleep_if_idle.sh</string>
+      <string>/Users/Your_username/zfus/idle-sleep/sleep_if_idle.sh</string>
     </array>
 
     <key>RunAtLoad</key>
