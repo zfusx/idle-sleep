@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# Time threshold in seconds (15 minutes)
+# Time threshold in seconds (10 minutes)
 THRESHOLD=600
 
-# Log file location  #update your_username to you mac username
+# Cooldown period after triggering sleep (in seconds)
+COOLDOWN=300  # 5 minutes
+
+# Log file location — update 'your_username' to your Mac username
 LOGFILE="/Users/your_username/zfus/idle-sleep/idle_sleep.log"
 
 while true; do
@@ -13,8 +16,10 @@ while true; do
     if [ "$idle_sec" -ge "$THRESHOLD" ]; then
         echo "$(date '+%Y-%m-%d %H:%M:%S') - Idle for $idle_sec seconds. Sleeping now..." >> "$LOGFILE"
         /usr/bin/pmset sleepnow
+
+        # Wait to prevent repeated logging or back-to-back sleep
+        sleep "$COOLDOWN"
+    else
+        sleep 60
     fi
-
-    sleep 60
 done
-
