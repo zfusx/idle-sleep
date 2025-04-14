@@ -13,6 +13,8 @@ While macOS has built-in sleep settings, many applications (like Chrome, App Sto
 - Reduced hardware lifespan  
 - Higher environmental impact (e-waste and emissions)
 
+so it's Mac not go to sleep or turn off the display when move or keep not moved for some time, it keeps awake for a whole night.
+
 `idle-sleep` restores user control by enforcing sleep when real input inactivity is detected, bypassing hidden app overrides. It’s perfect for desktops or laptops left idle overnight, or in energy-conscious setups.
 
 ---
